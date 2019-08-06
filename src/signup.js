@@ -1,0 +1,20 @@
+const express = require('express')
+const bodyParser = require('body-parser')
+const User = require('./database/user')
+
+const router = express.Router()
+router.use(bodyParser.urlencoded({ extended: true }))
+router.use(bodyParser.json())
+
+router.post('/signup',async (req,res)=>{
+   try{
+    const user = new User(req.body)
+    await user.save()
+    res.send()
+   }catch{
+       res.status(401).send()
+   }
+})
+
+
+module.exports = router

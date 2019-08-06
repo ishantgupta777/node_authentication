@@ -1,0 +1,28 @@
+{
+  "name": "node_authentication",
+  "version": "1.0.0",
+  "description": "a login page using nodejs and google and fb apis",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "env-cmd -f ./config/dev.env nodemon src/index.js -e html,css,js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ishantgupta777/node_authentication.git"
+  },
+  "author": "ISHANT",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ishantgupta777/node_authentication/issues"
+  },
+  "homepage": "https://github.com/ishantgupta777/node_authentication#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "env-cmd": "^9.0.3",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.1",
+    "mongoose": "^5.6.7",
+    "validator": "^11.1.0"
+  }
+}
