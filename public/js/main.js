@@ -10,7 +10,15 @@ $(document).ready(()=>{
           data: $("#signupForm").serialize(),
           success : function(data,status,xhr){
             if(xhr.status==200){
-              window.location.href = "/loggedIn"
+              // window.location.href = "/loggedIn"
+              $.ajax({
+                type: 'POST',
+                url: '/loggedIn',
+                data : {data},
+                success : function(data,status,xhr){
+                  document.write(data)
+                }
+              });
             }
           }
         });

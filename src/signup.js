@@ -9,8 +9,9 @@ router.use(bodyParser.json())
 router.post('/signup',async (req,res)=>{
    try{
     const user = new User(req.body)
+    await user.getToken()
     await user.save()
-    res.send()
+    res.send(user.tokens[0].token)
    }catch{
        res.status(401).send()
    }

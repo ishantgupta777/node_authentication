@@ -18,10 +18,11 @@
   },
   "homepage": "https://github.com/ishantgupta777/node_authentication#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "env-cmd": "^9.0.3",
     "express": "^4.17.1",
-    "express-jwt": "^5.3.1",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.6.7",
     "validator": "^11.1.0"
   }

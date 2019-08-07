@@ -3,6 +3,7 @@ const path = require('path')
 const bodyParser = require('body-parser')
 const User = require('./database/user')
 const mongoose = require('mongoose')
+const bcrypt = require('bcryptjs')
 
 const router = express.Router()
 router.use(bodyParser.urlencoded({ extended: true }))
@@ -18,13 +19,13 @@ router.post('/signin',async (req,res)=>{
         return res.status(401).send()
     }
 
-    const isPassCorrect = (user.password===req.body.password)
+    const isPassCorrect = await bcrypt.compare(req.body.password,user.password)
 
     if(!isPassCorrect){
         return res.status(500).send()
     }
-
-    res.send()
+    await user.getToken()
+    res.send(user.tokens[0].token)
 
 })
 
