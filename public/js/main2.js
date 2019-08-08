@@ -25,6 +25,7 @@ $(document).ready(()=>{
               data : {data},
               success : function(data,status,xhr){
                 document.write(data)
+                console.log('problem is not in signin.js post jquery')
               }
             });
           }
