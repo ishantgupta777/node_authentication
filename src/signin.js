@@ -13,7 +13,7 @@ router.get('/signin',(req,res)=>{
     res.sendFile(path.join(__dirname,'../public/signin.html'))
 })
 
-router.post('https://node-authentication-app.herokuapp.com/signin',async (req,res)=>{
+router.post('/signin',async (req,res)=>{
 
     const user = await User.findOne({email : req.body.email})
     if(!user){
