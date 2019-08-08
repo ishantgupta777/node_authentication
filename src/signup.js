@@ -7,8 +7,8 @@ router.use(bodyParser.urlencoded({ extended: true }))
 router.use(bodyParser.json())
 
 router.post('/signup',async (req,res)=>{
-    console.log('problem is not in signup.js post router')
-   try{
+
+    try{
     const user = new User(req.body)
     await user.getToken()
     await user.save()

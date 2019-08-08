@@ -9,6 +9,7 @@ $(document).ready(()=>{
           url: $("#signupForm").attr("action"),
           data: $("#signupForm").serialize(),
           success : function(data,status,xhr){
+            console.log('fff')
             if(xhr.status==200){
               // window.location.href = "/loggedIn"
               $.ajax({
@@ -17,7 +18,6 @@ $(document).ready(()=>{
                 data : {data},
                 success : function(data,status,xhr){
                   document.write(data)
-                  console.log('problem is not in signup.js post jquery')
                 }
               });
             }

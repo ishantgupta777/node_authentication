@@ -17,6 +17,7 @@ $(document).ready(()=>{
           }
         },
         success : function(data,status,xhr){
+          console.log('fff')
           if(xhr.status==200){
             // window.location.href = "/loggedIn"
             $.ajax({
@@ -25,7 +26,6 @@ $(document).ready(()=>{
               data : {data},
               success : function(data,status,xhr){
                 document.write(data)
-                console.log('problem is not in signin.js post jquery')
               }
             });
           }
