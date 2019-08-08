@@ -9,7 +9,6 @@ $(document).ready(()=>{
           url: $("#signupForm").attr("action"),
           data: $("#signupForm").serialize(),
           success : function(data,status,xhr){
-            console.log('fff')
             if(xhr.status==200){
               // window.location.href = "/loggedIn"
               $.ajax({

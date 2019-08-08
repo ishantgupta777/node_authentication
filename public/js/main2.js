@@ -17,7 +17,6 @@ $(document).ready(()=>{
           }
         },
         success : function(data,status,xhr){
-          console.log('fff')
           if(xhr.status==200){
             // window.location.href = "/loggedIn"
             $.ajax({
